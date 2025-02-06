@@ -1,3 +1,4 @@
+// Contents:
 {
   "extends": "astro/tsconfigs/base"
 }
