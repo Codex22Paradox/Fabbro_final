@@ -1,0 +1,26 @@
+---
+---
+
+<button id="back-to-top"
+        class="fixed bottom-2 right-4 p-6 bg-primary text-white rounded-full shadow-lg transition-opacity duration-300 opacity-0"
+        aria-label="Back to top">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+    </svg>
+</button>
+
+<script>
+    const backToTop = document.getElementById("back-to-top");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTop.style.opacity = "1";
+        } else {
+            backToTop.style.opacity = "0";
+        }
+    });
+
+    backToTop.addEventListener("click", () => {
+        window.scrollTo({top: 0, behavior: "smooth"});
+    });
+</script>
