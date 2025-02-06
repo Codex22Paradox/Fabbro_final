@@ -2,5 +2,5 @@ export default {
     printWidth: 1000,
     tabWidth: 4,
 
-    plugins: [require("prettier-plugin-tailwindcss")],
+    plugins: [(await import("prettier-plugin-tailwindcss")).default],
 };
